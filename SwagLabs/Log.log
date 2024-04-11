@@ -1,0 +1,12 @@
+2024-04-11 15:44:58,007 INFO  Configuration FilenameC:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\testData\Configuration.properties 
+2024-04-11 15:44:58,010 INFO  Browser name:Chrome 
+2024-04-11 15:44:58,010 INFO  URL:https://www.saucedemo.com/ 
+2024-04-11 15:44:58,055 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
+2024-04-11 15:44:58,055 INFO  Chromdriverpath is set 
+2024-04-11 15:44:59,347 INFO  Chromedriver is instantiated 
+2024-04-11 15:45:03,250 INFO  Navigated to url:https://www.saucedemo.com/ 
+2024-04-11 15:45:03,344 INFO  Entered data:locked_out_user in element:[[ChromeDriver: chrome on windows (0d4c73c3a7c104d8c066977318858997)] -> xpath: //input[@placeholder='Username']] 
+2024-04-11 15:45:03,400 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (0d4c73c3a7c104d8c066977318858997)] -> xpath: //input[@placeholder='Password']] 
+2024-04-11 15:45:03,468 INFO  Clicked on element:[[ChromeDriver: chrome on windows (0d4c73c3a7c104d8c066977318858997)] -> id: login-button] 
+2024-04-11 15:45:04,183 ERROR Element text is not matching - Expected:1Epic sadface: Sorry, this user has been locked out. Actual:Epic sadface: Sorry, this user has been locked out. 
+2024-04-11 15:45:04,377 INFO  Driver is quit 
