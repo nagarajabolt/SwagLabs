@@ -2,15 +2,21 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="e2e"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testcases.NegativeScenarios">
+      <class name="testcases.Scenarios">
         <methods>
+          <include name="LoginToApplication"/>
+          <include name="additional_Case"/>
+          <include name="LoginFlow"/>
           <include name="cleanUp"/>
-          <include name="navigateToUrl"/>
-          <include name="myTest" invocation-numbers="0"/>
           <include name="initialization"/>
         </methods>
-      </class> <!-- testcases.NegativeScenarios -->
+      </class> <!-- testcases.Scenarios -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

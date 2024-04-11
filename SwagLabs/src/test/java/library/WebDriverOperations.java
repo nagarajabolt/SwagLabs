@@ -12,11 +12,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
+import com.relevantcodes.extentreports.LogStatus;
 
 import objects.ProductPojo;
 import testData.TestData;
@@ -25,17 +27,27 @@ import testcases.BaseClass;
 public class WebDriverOperations extends BaseClass {
 
 	FileOperations fo = new FileOperations();
-	private Object FileUtils;
 	@SuppressWarnings("deprecation")
-	public void instantiateBrowser(String browser) {
+	public void instantiateBrowser(String browser, String headless) {
 		if(browser.equalsIgnoreCase("chrome")) {
 			Log.info("ChromeDriverPath:"+chromeDriverPath);
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			Log.info("Chromdriverpath is set");
-			driver = new ChromeDriver();
-			Log.info("Chromedriver is instantiated");
+			Log.info(headless);
+			if(headless.equalsIgnoreCase("true")) {
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--headless", "--start-maximized", "--ignore-certificate-errors");
+				driver = new ChromeDriver(chromeOptions);	
+				
+				Log.info("Headless Chromedriver is instantiated");
+			}else {
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--start-maximized", "--ignore-certificate-errors");
+				driver = new ChromeDriver(chromeOptions);
+				
+				Log.info("Not headless Chromedriver is instantiated");
+			}
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.manage().window().maximize();
 		}		
 
 	}
@@ -43,23 +55,47 @@ public class WebDriverOperations extends BaseClass {
 	
 	public void navigateToUrl(String url) {
 			driver.get(url);
-			Log.info("Navigated to url:"+url);		
+			Log.info("Navigated to url:"+url);	
 	}
 	
 	
 	public void enterEdit(WebElement element, String data) {
-		element.sendKeys(data);
-		Log.info("Entered data:"+data+" in element:"+element);
+		try {
+			element.sendKeys(data);
+			Log.info("Entered data:"+data+" in element:"+element);
+			successLog("Entered data:"+data+" in element:"+element);		
+		} catch (Exception e) {
+			Log.error(e);
+			failureLog("Unable to enter data:"+data+" in element:"+element);
+
+		}
+
 	}
 	
 	public void click(WebElement element) {
-		element.click();
-		Log.info("Clicked on element:"+element);
+		try {
+			element.click();
+			Log.info("Clicked on element:"+element);
+			successLog("Clicked on element:"+element);
+		} catch (Exception e) {
+			Log.error(e);
+			failureLog("Unable to click on element:"+element);	
+		}
+
 	}
 	
 	public Boolean verifyElementIsDisplayed(WebElement element) {
 		Boolean dispalyed = element.isDisplayed();
-		Log.info("Element is displayed:"+ dispalyed + " Element:"+element);		
+		
+		if(dispalyed) {
+			Log.info("Element is displayed: Element:"+element);	
+			test.log(LogStatus.PASS, "Element is displayed: Element:"+element);
+		}
+		else {
+			Log.error("Element is not displayed: Element:"+element);	
+			test.log(LogStatus.FAIL, "Element is not displayed Element:"+element);			
+		}
+
 		return dispalyed;
 	}
 	
@@ -67,11 +103,13 @@ public class WebDriverOperations extends BaseClass {
 		String actualText = element.getText();
 		Boolean elementTextIsMatching = actualText.equals(expectedString);
 		if(elementTextIsMatching) {
-			Log.info("Element text is matching:" +expectedString);				
+			Log.info("Element text is matching:" +expectedString);		
+			test.log(LogStatus.PASS, "Element text is matching:" +expectedString);
 		} else
 		{
 			takeScreenshot();
 			Log.error("Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);	
+			test.log(LogStatus.FAIL, "Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);	
 		}
 	
 		return elementTextIsMatching;
@@ -82,6 +120,7 @@ public class WebDriverOperations extends BaseClass {
 		try {
 			Thread.sleep(number*1000);
 			Log.info("Waited for "+number+" of seconds");
+			successLog("Waited for "+number+" of seconds");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -114,15 +153,29 @@ public class WebDriverOperations extends BaseClass {
 	
 	
 	public void selectDropDownItem(WebElement select, String valueToSelect) {
-		Select dropDown = new Select(select);
-		dropDown.selectByVisibleText(valueToSelect);
-		Log.info("Selected: "+valueToSelect+" from dropdown");
+		try {
+			Select dropDown = new Select(select);
+			dropDown.selectByVisibleText(valueToSelect);
+			Log.info("Selected: "+valueToSelect+" from dropdown");	
+			test.log(LogStatus.PASS, "Selected: "+valueToSelect+" from dropdown");
+		} catch (Exception e) {
+			test.log(LogStatus.FAIL, "Unable to select: "+valueToSelect+" from dropdown");
+		}
+
 	}
 	
 	
 	public void addProductToCart(int number) {
-		List<WebElement> addToCartButtons = driver.findElements(By.xpath("//button[contains(text(), 'Add to cart')]"));
-		addToCartButtons.get(number).click();
+		try {
+			List<WebElement> addToCartButtons = driver.findElements(By.xpath("//button[contains(text(), 'Add to cart')]"));
+			addToCartButtons.get(number).click();
+			Log.info("Added product to the cart");	
+			test.log(LogStatus.PASS, "Added product to the cart");
+		} catch (Exception e) {
+			Log.error("Not able to add product to the cart");	
+			test.log(LogStatus.FAIL, "Not able to add product to the cart");
+		}
+
 	}
 	
 	public int returnNumberOfItemsInCart() {
@@ -161,9 +214,24 @@ public class WebDriverOperations extends BaseClass {
 		try {
 			Files.copy(src, dest);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
+	}
+	
+	public void successLog(String message) {
+		try {
+			test.log(LogStatus.PASS, message);					
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	public void failureLog(String message) {
+		try {
+			test.log(LogStatus.FAIL, message);				
+		} catch (Exception e2) {
+			// TODO: handle exception
+		}
 	}
 }

@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\91998\git\SwagLabs\SwagLabs\testng.xml</span>
+                    <span>C:\Users\91998\git\SwagLabs\SwagLabs\testng-sanity.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,27 +108,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Scenarios" class="method navigator-link" hash-for-method="addingToCart">addingToCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testcases.Scenarios" class="method navigator-link" hash-for-method="additional_Case">additional_Case</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Scenarios" class="method navigator-link" hash-for-method="checkOut">checkOut</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Scenarios" class="method navigator-link" hash-for-method="productListingVerification">productListingVerification</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.Scenarios" class="method navigator-link" hash-for-method="sortingCheck">sortingCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -154,13 +134,8 @@
                   <a name="LoginFlow">
                   </a> <!-- LoginFlow -->
                   <span class="method-name">LoginFlow</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addingToCart">
-                  </a> <!-- addingToCart -->
-                  <span class="method-name">addingToCart</span>
+                  <em>
+(Checks if logo is displayed after login)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -168,27 +143,8 @@
                   <a name="additional_Case">
                   </a> <!-- additional_Case -->
                   <span class="method-name">additional_Case</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkOut">
-                  </a> <!-- checkOut -->
-                  <span class="method-name">checkOut</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="productListingVerification">
-                  </a> <!-- productListingVerification -->
-                  <span class="method-name">productListingVerification</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sortingCheck">
-                  </a> <!-- sortingCheck -->
-                  <span class="method-name">sortingCheck</span>
+                  <em>
+(Checks if user is able to checkout first 3 least priced products)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,7 +152,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\91998\git\SwagLabs\SwagLabs\testng.xml</span>
+            <span class="header-content">C:\Users\91998\git\SwagLabs\SwagLabs\testng-sanity.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -204,6 +160,11 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;e2e&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.Scenarios&quot;/&gt;
     &lt;/classes&gt;
@@ -229,6 +190,50 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">e2e</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">LoginFlow</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">additional_Case</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">positive</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">LoginFlow</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">LoginFlow</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">additional_Case</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">LoginFlow</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">additional_Case</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -245,36 +250,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sortingCheck')
+data.setCell(0, 1, 'additional_Case')
 data.setCell(0, 2, 'testcases.Scenarios')
-data.setCell(0, 3, 5735);
+data.setCell(0, 3, 969);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'additional_Case')
+data.setCell(1, 1, 'LoginFlow')
 data.setCell(1, 2, 'testcases.Scenarios')
-data.setCell(1, 3, 788);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'checkOut')
-data.setCell(2, 2, 'testcases.Scenarios')
-data.setCell(2, 3, 600);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'addingToCart')
-data.setCell(3, 2, 'testcases.Scenarios')
-data.setCell(3, 3, 154);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'productListingVerification')
-data.setCell(4, 2, 'testcases.Scenarios')
-data.setCell(4, 3, 148);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'LoginFlow')
-data.setCell(5, 2, 'testcases.Scenarios')
-data.setCell(5, 3, 102);
+data.setCell(1, 3, 303);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -289,9 +278,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testcases.Scenarios</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">checkOut</span>
+                <br/>
+                <span class="ignored-method-name">productListingVerification</span>
+                <br/>
+                <span class="ignored-method-name">sortingCheck</span>
+                <br/>
+                <span class="ignored-method-name">addingToCart</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -306,76 +308,28 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">loginToApplication</span>
-                <span class="method-start">101 ms</span>
+                <span class="method-name">LoginToApplication</span>
+                <span class="method-start">247 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginFlow</span>
-                <span class="method-start">7869 ms</span>
+                <span class="method-start">9556 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">7971 ms</span>
+                <span class="method-start">9877 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">loginToApplication</span>
-                <span class="method-start">8217 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">productListingVerification</span>
-                <span class="method-start">16461 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">16610 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">loginToApplication</span>
-                <span class="method-start">16931 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">sortingCheck</span>
-                <span class="method-start">25241 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">30979 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">loginToApplication</span>
-                <span class="method-start">31252 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">addingToCart</span>
-                <span class="method-start">39411 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">39566 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">loginToApplication</span>
-                <span class="method-start">39768 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">checkOut</span>
-                <span class="method-start">47988 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">48590 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">loginToApplication</span>
-                <span class="method-start">48929 ms</span>
+                <span class="method-name">LoginToApplication</span>
+                <span class="method-start">10382 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">additional_Case</span>
-                <span class="method-start">58569 ms</span>
+                <span class="method-start">19293 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanUp</span>
-                <span class="method-start">59358 ms</span>
+                <span class="method-start">20273 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

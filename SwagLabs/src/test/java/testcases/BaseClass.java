@@ -3,6 +3,10 @@ package testcases;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
 import library.FileOperations;
 import library.WebDriverOperations;
 import objects.ProductPojo;
@@ -16,7 +20,13 @@ import org.openqa.selenium.WebDriver;
 
 
 public class BaseClass {
+
+	
+	
 	public static Logger Log = Logger.getLogger(BaseClass.class);
+	protected static ExtentReports extent;
+	protected static ExtentTest test;
+
 
 	public static WebDriver driver = null;
 	public String workingDirectory = System.getProperty("user.dir");
@@ -30,13 +40,17 @@ public class BaseClass {
 	WebDriverOperations webDriverOperations = null;
 	ArrayList<ProductPojo> productsExpected = null;
 	String browser = "", url = "";
+
+	protected String headless = "false";
 	
-	@BeforeSuite
+	@BeforeSuite (groups = {"sanity", "regression", "positive", "e2e", "negative"})
 	public void initialization()
 	{
 		PropertyConfigurator.configure("Log4j.properties");
 		Log.info("Configuration Filename"+configurationFileName);
 
+		extent = new ExtentReports(workingDirectory+"/test-output/ExtentReportResults.html", true);
+		extent.assignProject("Swag Labs Automation Report");
 		fileOperations = new FileOperations();
 		properties = fileOperations.readPropertiesFile(configurationFileName);
 		webDriverOperations = new WebDriverOperations();
@@ -45,12 +59,15 @@ public class BaseClass {
 		browser = properties.getProperty("Browser");
 		Log.info("Browser name:"+browser);
 		url = properties.getProperty("URL");
-		Log.info("URL:"+url);		
+		Log.info("URL:"+url);	
+		headless = properties.getProperty("Headless");
+		Log.info("Headless:"+headless);	
 	}
 
-	@AfterSuite
+	@AfterSuite(groups = {"sanity", "regression", "positive", "e2e", "negative"})
 	public void cleanUp() {
 		webDriverOperations.quitBrowser();
+//		extent.flush();
 	}	
 
 }

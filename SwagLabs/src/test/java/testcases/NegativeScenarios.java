@@ -12,13 +12,13 @@ import testData.Messages;
 public class NegativeScenarios extends BaseClass{
 	HomePage hp = new HomePage();
 	Messages mm = new Messages();
-	@BeforeMethod
+	@BeforeMethod (groups = {"sanity"})
 	public void navigateToUrl() {
-		webDriverOperations.instantiateBrowser(browser);
+		webDriverOperations.instantiateBrowser(browser, headless);
 		webDriverOperations.navigateToUrl(url);
 	}
 	
-	@Test (dataProvider = "invalidLoginOptions", dataProviderClass = DataProviderClass.class)
+	@Test ( groups = {"regression", "negative"}, dataProvider = "invalidLoginOptions", dataProviderClass = DataProviderClass.class)
     public void myTest (String userName, String password) {
 		webDriverOperations.enterEdit(hp.homePage_username_editBox(), userName);
 		webDriverOperations.enterEdit(hp.homePage_password_editBox(), password);
@@ -30,7 +30,7 @@ public class NegativeScenarios extends BaseClass{
 		
     }
 	
-	@AfterMethod
+	@AfterMethod (groups = {"regression", "negative"})
 	public void cleanUp() {
 		webDriverOperations.quitBrowser();
 	}

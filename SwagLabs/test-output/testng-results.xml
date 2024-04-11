@@ -1,85 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-11T19:02:35 IST" name="Suite" finished-at="2024-04-11T19:03:34 IST" duration-ms="59489">
+  <suite started-at="2024-04-11T22:32:04 IST" name="Suite" finished-at="2024-04-11T22:32:24 IST" duration-ms="20389">
     <groups>
+      <group name="regression">
+        <method signature="Scenarios.LoginFlow()[pri:0, instance:testcases.Scenarios@bccb269]" name="LoginFlow" class="testcases.Scenarios"/>
+        <method signature="Scenarios.additional_Case()[pri:5, instance:testcases.Scenarios@bccb269]" name="additional_Case" class="testcases.Scenarios"/>
+      </group> <!-- regression -->
+      <group name="e2e">
+        <method signature="Scenarios.LoginFlow()[pri:0, instance:testcases.Scenarios@bccb269]" name="LoginFlow" class="testcases.Scenarios"/>
+        <method signature="Scenarios.additional_Case()[pri:5, instance:testcases.Scenarios@bccb269]" name="additional_Case" class="testcases.Scenarios"/>
+      </group> <!-- e2e -->
+      <group name="sanity">
+        <method signature="Scenarios.LoginFlow()[pri:0, instance:testcases.Scenarios@bccb269]" name="LoginFlow" class="testcases.Scenarios"/>
+        <method signature="Scenarios.additional_Case()[pri:5, instance:testcases.Scenarios@bccb269]" name="additional_Case" class="testcases.Scenarios"/>
+      </group> <!-- sanity -->
+      <group name="positive">
+        <method signature="Scenarios.LoginFlow()[pri:0, instance:testcases.Scenarios@bccb269]" name="LoginFlow" class="testcases.Scenarios"/>
+      </group> <!-- positive -->
     </groups>
-    <test started-at="2024-04-11T19:02:35 IST" name="Test" finished-at="2024-04-11T19:03:34 IST" duration-ms="59489">
+    <test started-at="2024-04-11T22:32:04 IST" name="Test" finished-at="2024-04-11T22:32:24 IST" duration-ms="20389">
       <class name="testcases.Scenarios">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:35 IST" name="initialization" finished-at="2024-04-11T19:02:35 IST" duration-ms="74" status="PASS">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:testcases.Scenarios@bccb269]" started-at="2024-04-11T22:32:04 IST" name="initialization" finished-at="2024-04-11T22:32:04 IST" duration-ms="222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:35 IST" name="loginToApplication" finished-at="2024-04-11T19:02:42 IST" duration-ms="7766" status="PASS">
+        <test-method is-config="true" signature="LoginToApplication()[pri:0, instance:testcases.Scenarios@bccb269]" started-at="2024-04-11T22:32:04 IST" name="LoginToApplication" description="Logs into the application" finished-at="2024-04-11T22:32:13 IST" duration-ms="9308" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginToApplication -->
-        <test-method signature="LoginFlow()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:42 IST" name="LoginFlow" finished-at="2024-04-11T19:02:43 IST" duration-ms="102" status="PASS">
+        </test-method> <!-- LoginToApplication -->
+        <test-method signature="LoginFlow()[pri:0, instance:testcases.Scenarios@bccb269]" started-at="2024-04-11T22:32:13 IST" name="LoginFlow" description="Checks if logo is displayed after login" finished-at="2024-04-11T22:32:14 IST" duration-ms="303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginFlow -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:43 IST" name="cleanUp" finished-at="2024-04-11T19:02:43 IST" duration-ms="243" status="PASS">
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@bccb269]" started-at="2024-04-11T22:32:14 IST" name="cleanUp" description="Quits browser" finished-at="2024-04-11T22:32:14 IST" duration-ms="498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:43 IST" name="loginToApplication" finished-at="2024-04-11T19:02:51 IST" duration-ms="8243" status="PASS">
+        <test-method is-config="true" signature="LoginToApplication()[pri:0, instance:testcases.Scenarios@bccb269]" started-at="2024-04-11T22:32:14 IST" name="LoginToApplication" description="Logs into the application" finished-at="2024-04-11T22:32:23 IST" duration-ms="8910" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginToApplication -->
-        <test-method signature="productListingVerification()[pri:1, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:51 IST" name="productListingVerification" finished-at="2024-04-11T19:02:51 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="148" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productListingVerification -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:51 IST" name="cleanUp" finished-at="2024-04-11T19:02:51 IST" duration-ms="318" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:51 IST" name="loginToApplication" finished-at="2024-04-11T19:03:00 IST" duration-ms="8309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginToApplication -->
-        <test-method signature="sortingCheck()[pri:2, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:00 IST" name="sortingCheck" finished-at="2024-04-11T19:03:06 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="5735" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sortingCheck -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:06 IST" name="cleanUp" finished-at="2024-04-11T19:03:06 IST" duration-ms="270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:06 IST" name="loginToApplication" finished-at="2024-04-11T19:03:14 IST" duration-ms="8158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginToApplication -->
-        <test-method signature="addingToCart()[pri:3, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:14 IST" name="addingToCart" finished-at="2024-04-11T19:03:14 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="154" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addingToCart -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:14 IST" name="cleanUp" finished-at="2024-04-11T19:03:14 IST" duration-ms="202" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:14 IST" name="loginToApplication" finished-at="2024-04-11T19:03:23 IST" duration-ms="8220" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginToApplication -->
-        <test-method signature="checkOut()[pri:4, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:23 IST" name="checkOut" finished-at="2024-04-11T19:03:23 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="600" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkOut -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:23 IST" name="cleanUp" finished-at="2024-04-11T19:03:23 IST" duration-ms="338" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:23 IST" name="loginToApplication" finished-at="2024-04-11T19:03:33 IST" duration-ms="9639" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginToApplication -->
-        <test-method signature="additional_Case()[pri:5, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:33 IST" name="additional_Case" finished-at="2024-04-11T19:03:34 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="788" status="PASS">
+        </test-method> <!-- LoginToApplication -->
+        <test-method signature="additional_Case()[pri:5, instance:testcases.Scenarios@bccb269]" started-at="2024-04-11T22:32:23 IST" name="additional_Case" description="Checks if user is able to checkout first 3 least priced products" finished-at="2024-04-11T22:32:24 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="969" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- additional_Case -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:34 IST" name="cleanUp" finished-at="2024-04-11T19:03:34 IST" duration-ms="205" status="PASS">
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@bccb269]" started-at="2024-04-11T22:32:24 IST" name="cleanUp" description="Quits browser" finished-at="2024-04-11T22:32:24 IST" duration-ms="339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->

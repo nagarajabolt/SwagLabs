@@ -1,247 +1,58 @@
-2024-04-11 19:02:35,114 INFO  Configuration FilenameC:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\testData\Configuration.properties 
-2024-04-11 19:02:35,117 INFO  Browser name:Chrome 
-2024-04-11 19:02:35,117 INFO  URL:https://www.saucedemo.com/ 
-2024-04-11 19:02:35,144 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:02:35,144 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-11 19:02:35,144 INFO  Chromdriverpath is set 
-2024-04-11 19:02:36,459 INFO  Chromedriver is instantiated 
-2024-04-11 19:02:37,631 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-11 19:02:37,720 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (27dd276f9753643c1e1a1d2b9be18576)] -> xpath: //input[@placeholder='Username']] 
-2024-04-11 19:02:37,783 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (27dd276f9753643c1e1a1d2b9be18576)] -> xpath: //input[@placeholder='Password']] 
-2024-04-11 19:02:37,860 INFO  Clicked on element:[[ChromeDriver: chrome on windows (27dd276f9753643c1e1a1d2b9be18576)] -> id: login-button] 
-2024-04-11 19:02:37,897 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:02:42,910 INFO  Waited for 5 of seconds 
-2024-04-11 19:02:42,938 INFO  <---------> Testcase - LoginFlow <--------->  
-2024-04-11 19:02:42,989 INFO  Element is displayed:true Element:[[ChromeDriver: chrome on windows (27dd276f9753643c1e1a1d2b9be18576)] -> xpath: //div[contains(text(), 'Swag Labs')]] 
-2024-04-11 19:02:43,014 INFO  Element text is matching:Swag Labs 
-2024-04-11 19:02:43,014 INFO  <---------> Testcase - LoginFlow <--------->  
-2024-04-11 19:02:43,257 INFO  Driver is quit 
-2024-04-11 19:02:43,260 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:02:43,260 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-11 19:02:43,260 INFO  Chromdriverpath is set 
-2024-04-11 19:02:45,315 INFO  Chromedriver is instantiated 
-2024-04-11 19:02:46,246 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-11 19:02:46,331 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (7009ee8ffaed7afb656c787e640c9ced)] -> xpath: //input[@placeholder='Username']] 
-2024-04-11 19:02:46,392 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (7009ee8ffaed7afb656c787e640c9ced)] -> xpath: //input[@placeholder='Password']] 
-2024-04-11 19:02:46,467 INFO  Clicked on element:[[ChromeDriver: chrome on windows (7009ee8ffaed7afb656c787e640c9ced)] -> id: login-button] 
-2024-04-11 19:02:46,500 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:02:51,503 INFO  Waited for 5 of seconds 
-2024-04-11 19:02:51,508 INFO  <---------> Testcase - productListingVerification <--------->  
-2024-04-11 19:02:51,577 INFO  Itemname:Sauce Labs Backpack price:29.99 
-2024-04-11 19:02:51,594 INFO  Itemname:Sauce Labs Bike Light price:9.99 
-2024-04-11 19:02:51,608 INFO  Itemname:Sauce Labs Bolt T-Shirt price:15.99 
-2024-04-11 19:02:51,622 INFO  Itemname:Sauce Labs Fleece Jacket price:49.99 
-2024-04-11 19:02:51,637 INFO  Itemname:Sauce Labs Onesie price:7.99 
-2024-04-11 19:02:51,651 INFO  Itemname:Test.allTheThings() T-Shirt (Red) price:15.99 
-2024-04-11 19:02:51,652 INFO  Actual  : Sauce Labs Backpack 29.99 
-2024-04-11 19:02:51,652 INFO  Expected: Sauce Labs Backpack 29.99 
-2024-04-11 19:02:51,652 INFO  Actual  : Sauce Labs Bike Light 9.99 
-2024-04-11 19:02:51,652 INFO  Expected: Sauce Labs Bike Light 9.99 
-2024-04-11 19:02:51,652 INFO  Actual  : Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:02:51,652 INFO  Expected: Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:02:51,652 INFO  Actual  : Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:02:51,652 INFO  Expected: Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:02:51,652 INFO  Actual  : Sauce Labs Onesie 7.99 
-2024-04-11 19:02:51,652 INFO  Expected: Sauce Labs Onesie 7.99 
-2024-04-11 19:02:51,652 INFO  Actual  : Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:02:51,652 INFO  Expected: Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:02:51,652 INFO  Products are displayed correctly 
-2024-04-11 19:02:51,652 INFO  <---------> Testcase - productListingVerification <--------->  
-2024-04-11 19:02:51,971 INFO  Driver is quit 
-2024-04-11 19:02:51,975 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:02:51,975 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-11 19:02:51,976 INFO  Chromdriverpath is set 
-2024-04-11 19:02:53,026 INFO  Chromedriver is instantiated 
-2024-04-11 19:02:55,019 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-11 19:02:55,100 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (ef65833ed974d25578f5d23f0482cf37)] -> xpath: //input[@placeholder='Username']] 
-2024-04-11 19:02:55,158 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (ef65833ed974d25578f5d23f0482cf37)] -> xpath: //input[@placeholder='Password']] 
-2024-04-11 19:02:55,231 INFO  Clicked on element:[[ChromeDriver: chrome on windows (ef65833ed974d25578f5d23f0482cf37)] -> id: login-button] 
-2024-04-11 19:02:55,260 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:03:00,283 INFO  Waited for 5 of seconds 
-2024-04-11 19:03:00,287 INFO  <---------> Testcase - sortingCheck <--------->  
-2024-04-11 19:03:00,290 INFO  Arraylist is sorted by ascending order of Product Name 
-2024-04-11 19:03:00,290 INFO  Method - displayListItems 
-2024-04-11 19:03:00,290 INFO  Sauce Labs Backpack  29.99 
-2024-04-11 19:03:00,290 INFO  Sauce Labs Bike Light  9.99 
-2024-04-11 19:03:00,290 INFO  Sauce Labs Bolt T-Shirt  15.99 
-2024-04-11 19:03:00,290 INFO  Sauce Labs Fleece Jacket  49.99 
-2024-04-11 19:03:00,290 INFO  Sauce Labs Onesie  7.99 
-2024-04-11 19:03:00,290 INFO  Test.allTheThings() T-Shirt (Red)  15.99 
-2024-04-11 19:03:00,290 INFO  Method - displayListItems - end 
-2024-04-11 19:03:00,333 INFO  element sortinglist is returned 
-2024-04-11 19:03:00,379 INFO  Selected: Name (A to Z) from dropdown 
-2024-04-11 19:03:00,422 INFO  Itemname:Sauce Labs Backpack price:29.99 
-2024-04-11 19:03:00,434 INFO  Itemname:Sauce Labs Bike Light price:9.99 
-2024-04-11 19:03:00,447 INFO  Itemname:Sauce Labs Bolt T-Shirt price:15.99 
-2024-04-11 19:03:00,460 INFO  Itemname:Sauce Labs Fleece Jacket price:49.99 
-2024-04-11 19:03:00,472 INFO  Itemname:Sauce Labs Onesie price:7.99 
-2024-04-11 19:03:00,485 INFO  Itemname:Test.allTheThings() T-Shirt (Red) price:15.99 
-2024-04-11 19:03:00,485 INFO  Actual  : Sauce Labs Backpack 29.99 
-2024-04-11 19:03:00,485 INFO  Expected: Sauce Labs Backpack 29.99 
-2024-04-11 19:03:00,485 INFO  Actual  : Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:00,485 INFO  Expected: Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:00,485 INFO  Actual  : Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:00,485 INFO  Expected: Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:00,485 INFO  Actual  : Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:00,485 INFO  Expected: Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:00,485 INFO  Actual  : Sauce Labs Onesie 7.99 
-2024-04-11 19:03:00,485 INFO  Expected: Sauce Labs Onesie 7.99 
-2024-04-11 19:03:00,485 INFO  Actual  : Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:00,485 INFO  Expected: Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:00,485 INFO  Products are sorted correctly 
-2024-04-11 19:03:00,486 INFO  Arraylist is sorted by descending order of Product Name 
-2024-04-11 19:03:00,486 INFO  Method - displayListItems 
-2024-04-11 19:03:00,486 INFO  Test.allTheThings() T-Shirt (Red)  15.99 
-2024-04-11 19:03:00,486 INFO  Sauce Labs Onesie  7.99 
-2024-04-11 19:03:00,486 INFO  Sauce Labs Fleece Jacket  49.99 
-2024-04-11 19:03:00,486 INFO  Sauce Labs Bolt T-Shirt  15.99 
-2024-04-11 19:03:00,486 INFO  Sauce Labs Bike Light  9.99 
-2024-04-11 19:03:00,486 INFO  Sauce Labs Backpack  29.99 
-2024-04-11 19:03:00,486 INFO  Method - displayListItems - end 
-2024-04-11 19:03:00,492 INFO  element sortinglist is returned 
-2024-04-11 19:03:00,556 INFO  Selected: Name (Z to A) from dropdown 
-2024-04-11 19:03:00,594 INFO  Itemname:Test.allTheThings() T-Shirt (Red) price:15.99 
-2024-04-11 19:03:00,609 INFO  Itemname:Sauce Labs Onesie price:7.99 
-2024-04-11 19:03:00,622 INFO  Itemname:Sauce Labs Fleece Jacket price:49.99 
-2024-04-11 19:03:00,634 INFO  Itemname:Sauce Labs Bolt T-Shirt price:15.99 
-2024-04-11 19:03:00,647 INFO  Itemname:Sauce Labs Bike Light price:9.99 
-2024-04-11 19:03:00,660 INFO  Itemname:Sauce Labs Backpack price:29.99 
-2024-04-11 19:03:00,660 INFO  Actual  : Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:00,660 INFO  Expected: Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:00,660 INFO  Actual  : Sauce Labs Onesie 7.99 
-2024-04-11 19:03:00,660 INFO  Expected: Sauce Labs Onesie 7.99 
-2024-04-11 19:03:00,660 INFO  Actual  : Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:00,660 INFO  Expected: Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:00,660 INFO  Actual  : Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:00,660 INFO  Expected: Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:00,660 INFO  Actual  : Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:00,660 INFO  Expected: Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:00,660 INFO  Actual  : Sauce Labs Backpack 29.99 
-2024-04-11 19:03:00,660 INFO  Expected: Sauce Labs Backpack 29.99 
-2024-04-11 19:03:00,660 INFO  Products are sorted correctly 
-2024-04-11 19:03:00,661 INFO  Arraylist is sorted by ascending order of Price 
-2024-04-11 19:03:00,661 INFO  Method - displayListItems 
-2024-04-11 19:03:00,661 INFO  Sauce Labs Onesie  7.99 
-2024-04-11 19:03:00,661 INFO  Sauce Labs Bike Light  9.99 
-2024-04-11 19:03:00,661 INFO  Test.allTheThings() T-Shirt (Red)  15.99 
-2024-04-11 19:03:00,661 INFO  Sauce Labs Bolt T-Shirt  15.99 
-2024-04-11 19:03:00,661 INFO  Sauce Labs Backpack  29.99 
-2024-04-11 19:03:00,661 INFO  Sauce Labs Fleece Jacket  49.99 
-2024-04-11 19:03:00,661 INFO  Method - displayListItems - end 
-2024-04-11 19:03:00,667 INFO  element sortinglist is returned 
-2024-04-11 19:03:00,723 INFO  Selected: Price (low to high) from dropdown 
-2024-04-11 19:03:00,757 INFO  Itemname:Sauce Labs Onesie price:7.99 
-2024-04-11 19:03:00,773 INFO  Itemname:Sauce Labs Bike Light price:9.99 
-2024-04-11 19:03:00,789 INFO  Itemname:Sauce Labs Bolt T-Shirt price:15.99 
-2024-04-11 19:03:00,806 INFO  Itemname:Test.allTheThings() T-Shirt (Red) price:15.99 
-2024-04-11 19:03:00,823 INFO  Itemname:Sauce Labs Backpack price:29.99 
-2024-04-11 19:03:00,838 INFO  Itemname:Sauce Labs Fleece Jacket price:49.99 
-2024-04-11 19:03:00,838 INFO  Actual  : Sauce Labs Onesie 7.99 
-2024-04-11 19:03:00,838 INFO  Expected: Sauce Labs Onesie 7.99 
-2024-04-11 19:03:00,838 INFO  Actual  : Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:00,838 INFO  Expected: Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:00,838 INFO  Actual  : Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:00,838 INFO  Expected: Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:00,838 INFO  Actual  : Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:00,838 INFO  Expected: Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:00,838 INFO  Actual  : Sauce Labs Backpack 29.99 
-2024-04-11 19:03:00,838 INFO  Expected: Sauce Labs Backpack 29.99 
-2024-04-11 19:03:00,839 INFO  Actual  : Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:00,839 INFO  Expected: Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:00,839 INFO  Products are sorted correctly 
-2024-04-11 19:03:00,839 INFO  Arraylist is sorted by descending order of Price 
-2024-04-11 19:03:00,839 INFO  Method - displayListItems 
-2024-04-11 19:03:00,839 INFO  Sauce Labs Fleece Jacket  49.99 
-2024-04-11 19:03:00,839 INFO  Sauce Labs Backpack  29.99 
-2024-04-11 19:03:00,839 INFO  Test.allTheThings() T-Shirt (Red)  15.99 
-2024-04-11 19:03:00,839 INFO  Sauce Labs Bolt T-Shirt  15.99 
-2024-04-11 19:03:00,839 INFO  Sauce Labs Bike Light  9.99 
-2024-04-11 19:03:00,839 INFO  Sauce Labs Onesie  7.99 
-2024-04-11 19:03:00,839 INFO  Method - displayListItems - end 
-2024-04-11 19:03:00,849 INFO  element sortinglist is returned 
-2024-04-11 19:03:00,905 INFO  Selected: Price (high to low) from dropdown 
-2024-04-11 19:03:00,939 INFO  Itemname:Sauce Labs Fleece Jacket price:49.99 
-2024-04-11 19:03:00,951 INFO  Itemname:Sauce Labs Backpack price:29.99 
-2024-04-11 19:03:00,963 INFO  Itemname:Sauce Labs Bolt T-Shirt price:15.99 
-2024-04-11 19:03:00,976 INFO  Itemname:Test.allTheThings() T-Shirt (Red) price:15.99 
-2024-04-11 19:03:00,987 INFO  Itemname:Sauce Labs Bike Light price:9.99 
-2024-04-11 19:03:01,000 INFO  Itemname:Sauce Labs Onesie price:7.99 
-2024-04-11 19:03:01,000 INFO  Actual  : Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:01,000 INFO  Expected: Sauce Labs Fleece Jacket 49.99 
-2024-04-11 19:03:01,000 INFO  Actual  : Sauce Labs Backpack 29.99 
-2024-04-11 19:03:01,000 INFO  Expected: Sauce Labs Backpack 29.99 
-2024-04-11 19:03:01,000 INFO  Actual  : Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:01,000 INFO  Expected: Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:01,000 INFO  Actual  : Test.allTheThings() T-Shirt (Red) 15.99 
-2024-04-11 19:03:01,000 INFO  Expected: Sauce Labs Bolt T-Shirt 15.99 
-2024-04-11 19:03:01,000 INFO  Actual  : Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:01,000 INFO  Expected: Sauce Labs Bike Light 9.99 
-2024-04-11 19:03:01,000 INFO  Actual  : Sauce Labs Onesie 7.99 
-2024-04-11 19:03:01,000 INFO  Expected: Sauce Labs Onesie 7.99 
-2024-04-11 19:03:01,000 INFO  Products are sorted correctly 
-2024-04-11 19:03:06,019 INFO  Waited for 5 of seconds 
-2024-04-11 19:03:06,019 INFO  <---------> Testcase - sortingCheck <--------->  
-2024-04-11 19:03:06,292 INFO  Driver is quit 
-2024-04-11 19:03:06,295 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:03:06,295 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-11 19:03:06,295 INFO  Chromdriverpath is set 
-2024-04-11 19:03:07,212 INFO  Chromedriver is instantiated 
-2024-04-11 19:03:09,217 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-11 19:03:09,297 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (c50cc18a9315ac4a04298f7808575ca7)] -> xpath: //input[@placeholder='Username']] 
-2024-04-11 19:03:09,351 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (c50cc18a9315ac4a04298f7808575ca7)] -> xpath: //input[@placeholder='Password']] 
-2024-04-11 19:03:09,427 INFO  Clicked on element:[[ChromeDriver: chrome on windows (c50cc18a9315ac4a04298f7808575ca7)] -> id: login-button] 
-2024-04-11 19:03:09,451 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:03:14,453 INFO  Waited for 5 of seconds 
-2024-04-11 19:03:14,457 INFO  <---------> Testcase - addingToCart <--------->  
-2024-04-11 19:03:14,561 INFO  Clicked on element:[[ChromeDriver: chrome on windows (c50cc18a9315ac4a04298f7808575ca7)] -> xpath: //a[@class = 'shopping_cart_link']] 
-2024-04-11 19:03:14,572 INFO  Number of items in cart is matching 
-2024-04-11 19:03:14,608 INFO  Clicked on element:[[ChromeDriver: chrome on windows (c50cc18a9315ac4a04298f7808575ca7)] -> id: remove-sauce-labs-backpack] 
-2024-04-11 19:03:14,608 INFO  <---------> Testcase - addingToCart <--------->  
-2024-04-11 19:03:14,810 INFO  Driver is quit 
-2024-04-11 19:03:14,812 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:03:14,812 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-11 19:03:14,812 INFO  Chromdriverpath is set 
-2024-04-11 19:03:15,818 INFO  Chromedriver is instantiated 
-2024-04-11 19:03:16,679 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-11 19:03:17,873 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> xpath: //input[@placeholder='Username']] 
-2024-04-11 19:03:17,932 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> xpath: //input[@placeholder='Password']] 
-2024-04-11 19:03:18,006 INFO  Clicked on element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: login-button] 
-2024-04-11 19:03:18,028 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:03:23,031 INFO  Waited for 5 of seconds 
-2024-04-11 19:03:23,033 INFO  <---------> Testcase - checkOut <--------->  
-2024-04-11 19:03:23,130 INFO  Clicked on element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> xpath: //a[@class = 'shopping_cart_link']] 
-2024-04-11 19:03:23,186 INFO  Clicked on element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: checkout] 
-2024-04-11 19:03:23,267 INFO  Entered data:SampleFirstName in element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: first-name] 
-2024-04-11 19:03:23,346 INFO  Entered data:SampleLastName in element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: last-name] 
-2024-04-11 19:03:23,402 INFO  Entered data:556677 in element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: postal-code] 
-2024-04-11 19:03:23,501 INFO  Clicked on element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: continue] 
-2024-04-11 19:03:23,552 INFO  Clicked on element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: finish] 
-2024-04-11 19:03:23,575 INFO  Element is displayed:true Element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> xpath: //h2[contains(text(),'Thank you for your order!')]] 
-2024-04-11 19:03:23,631 INFO  Clicked on element:[[ChromeDriver: chrome on windows (0123c83e8cee2550910fc143ea0f9de3)] -> id: back-to-products] 
-2024-04-11 19:03:23,631 INFO  User is able to checkout product 
-2024-04-11 19:03:23,631 INFO  <---------> Testcase - checkOut <--------->  
-2024-04-11 19:03:23,971 INFO  Driver is quit 
-2024-04-11 19:03:23,972 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:03:23,972 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-11 19:03:23,972 INFO  Chromdriverpath is set 
-2024-04-11 19:03:27,501 INFO  Chromedriver is instantiated 
-2024-04-11 19:03:28,356 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-11 19:03:28,434 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> xpath: //input[@placeholder='Username']] 
-2024-04-11 19:03:28,497 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> xpath: //input[@placeholder='Password']] 
-2024-04-11 19:03:28,572 INFO  Clicked on element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> id: login-button] 
-2024-04-11 19:03:28,594 INFO  <---------> Login to the application <--------->  
-2024-04-11 19:03:33,611 INFO  Waited for 5 of seconds 
-2024-04-11 19:03:33,612 INFO  <---------> Testcase - additional_Case <--------->  
-2024-04-11 19:03:33,649 INFO  element sortinglist is returned 
-2024-04-11 19:03:33,713 INFO  Selected: Price (low to high) from dropdown 
-2024-04-11 19:03:33,895 INFO  Clicked on element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> xpath: //a[@class = 'shopping_cart_link']] 
-2024-04-11 19:03:33,962 INFO  Clicked on element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> id: checkout] 
-2024-04-11 19:03:34,064 INFO  Entered data:SampleFirstName in element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> id: first-name] 
-2024-04-11 19:03:34,151 INFO  Entered data:SampleLastName in element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> id: last-name] 
-2024-04-11 19:03:34,211 INFO  Entered data:556677 in element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> id: postal-code] 
-2024-04-11 19:03:34,315 INFO  Clicked on element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> id: continue] 
-2024-04-11 19:03:34,372 INFO  Clicked on element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> id: finish] 
-2024-04-11 19:03:34,400 INFO  Element is displayed:true Element:[[ChromeDriver: chrome on windows (31f330e19a73ea3dd744e6bcdb20fa35)] -> xpath: //h2[contains(text(),'Thank you for your order!')]] 
-2024-04-11 19:03:34,400 INFO  User is able to checkout 3 products 
-2024-04-11 19:03:34,400 INFO  <---------> Testcase - additional_Case <--------->  
-2024-04-11 19:03:34,606 INFO  Driver is quit 
+2024-04-11 22:32:04,285 INFO  Configuration FilenameC:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\testData\Configuration.properties 
+2024-04-11 22:32:04,403 INFO  Browser name:Chrome 
+2024-04-11 22:32:04,403 INFO  URL:https://www.saucedemo.com/ 
+2024-04-11 22:32:04,403 INFO  Headless:false 
+2024-04-11 22:32:04,428 INFO  <---------> Login to the application <--------->  
+2024-04-11 22:32:04,428 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
+2024-04-11 22:32:04,429 INFO  Chromdriverpath is set 
+2024-04-11 22:32:04,429 INFO  false 
+2024-04-11 22:32:07,670 INFO  Not headless Chromedriver is instantiated 
+2024-04-11 22:32:08,429 INFO  Navigated to url:https://www.saucedemo.com/ 
+2024-04-11 22:32:08,519 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (bc15137d340609f7738c8d23778e3b1e)] -> xpath: //input[@placeholder='Username']] 
+2024-04-11 22:32:08,591 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (bc15137d340609f7738c8d23778e3b1e)] -> xpath: //input[@placeholder='Password']] 
+2024-04-11 22:32:08,697 INFO  Clicked on element:[[ChromeDriver: chrome on windows (bc15137d340609f7738c8d23778e3b1e)] -> id: login-button] 
+2024-04-11 22:32:08,733 INFO  <---------> Login to the application <--------->  
+2024-04-11 22:32:13,736 INFO  Waited for 5 of seconds 
+2024-04-11 22:32:13,737 INFO  <---------> Testcase - LoginFlow <--------->  
+2024-04-11 22:32:13,770 INFO  Element is displayed: Element:[[ChromeDriver: chrome on windows (bc15137d340609f7738c8d23778e3b1e)] -> xpath: //div[contains(text(), 'Swag Labs')]] 
+2024-04-11 22:32:13,793 INFO  Element text is matching:Swag Labs 
+2024-04-11 22:32:13,793 INFO  <---------> Testcase - LoginFlow <--------->  
+2024-04-11 22:32:13,809 DEBUG Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it. 
+2024-04-11 22:32:13,809 DEBUG TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found 
+2024-04-11 22:32:13,809 DEBUG TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found 
+2024-04-11 22:32:13,814 DEBUG TemplateLoader.findTemplateSource("Extent.ftl"): Found 
+2024-04-11 22:32:13,814 DEBUG Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/91998/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl" 
+2024-04-11 22:32:14,556 INFO  Driver is quit 
+2024-04-11 22:32:14,563 INFO  <---------> Login to the application <--------->  
+2024-04-11 22:32:14,563 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
+2024-04-11 22:32:14,563 INFO  Chromdriverpath is set 
+2024-04-11 22:32:14,563 INFO  false 
+2024-04-11 22:32:17,468 INFO  Not headless Chromedriver is instantiated 
+2024-04-11 22:32:18,213 INFO  Navigated to url:https://www.saucedemo.com/ 
+2024-04-11 22:32:18,294 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> xpath: //input[@placeholder='Username']] 
+2024-04-11 22:32:18,362 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> xpath: //input[@placeholder='Password']] 
+2024-04-11 22:32:18,437 INFO  Clicked on element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> id: login-button] 
+2024-04-11 22:32:18,462 INFO  <---------> Login to the application <--------->  
+2024-04-11 22:32:23,473 INFO  Waited for 5 of seconds 
+2024-04-11 22:32:23,481 INFO  <---------> Testcase - additional_Case <--------->  
+2024-04-11 22:32:23,502 INFO  element sortinglist is returned 
+2024-04-11 22:32:23,580 INFO  Selected: Price (low to high) from dropdown 
+2024-04-11 22:32:23,623 INFO  Added product to the cart 
+2024-04-11 22:32:23,662 INFO  Added product to the cart 
+2024-04-11 22:32:23,699 INFO  Added product to the cart 
+2024-04-11 22:32:23,763 INFO  Clicked on element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> xpath: //a[@class = 'shopping_cart_link']] 
+2024-04-11 22:32:23,825 INFO  Clicked on element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> id: checkout] 
+2024-04-11 22:32:23,932 INFO  Entered data:SampleFirstName in element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> id: first-name] 
+2024-04-11 22:32:24,034 INFO  Entered data:SampleLastName in element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> id: last-name] 
+2024-04-11 22:32:24,091 INFO  Entered data:556677 in element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> id: postal-code] 
+2024-04-11 22:32:24,301 INFO  Clicked on element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> id: continue] 
+2024-04-11 22:32:24,384 INFO  Clicked on element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> id: finish] 
+2024-04-11 22:32:24,412 INFO  Element is displayed: Element:[[ChromeDriver: chrome on windows (521bc336e41b4e76ebcf054ce3501590)] -> xpath: //h2[contains(text(),'Thank you for your order!')]] 
+2024-04-11 22:32:24,412 INFO  User is able to checkout 3 products 
+2024-04-11 22:32:24,412 INFO  <---------> Testcase - additional_Case <--------->  
+2024-04-11 22:32:24,413 DEBUG Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it. 
+2024-04-11 22:32:24,413 DEBUG TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found 
+2024-04-11 22:32:24,413 DEBUG TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found 
+2024-04-11 22:32:24,413 DEBUG TemplateLoader.findTemplateSource("Extent.ftl"): Found 
+2024-04-11 22:32:24,414 DEBUG Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/91998/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl" 
+2024-04-11 22:32:24,793 INFO  Driver is quit 
