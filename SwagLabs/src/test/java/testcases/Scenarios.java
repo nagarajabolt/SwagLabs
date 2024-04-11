@@ -2,6 +2,7 @@ package testcases;
 
 import java.util.ArrayList;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,7 +14,10 @@ import objects.HomePage;
 import objects.ProductPojo;
 import objects.ProductsPage;
 import testData.TestData;
-
+/**
+ * This class contains all positive scenarios like login flow, sorting, adding to cart, checkout
+ * 
+ */
 public class Scenarios extends BaseClass {
 	HomePage hp = new HomePage();
 	ProductsPage pp = new ProductsPage();
@@ -37,9 +41,16 @@ public class Scenarios extends BaseClass {
 	}
 	
 	@AfterMethod(description = "Quits browser", groups = {"sanity", "regression", "positive", "e2e"})
-	public void cleanUp() {
-		webDriverOperations.quitBrowser();
-
+	public void cleanUp(ITestResult result) {
+		webDriverOperations.quitBrowser();	
+	if(result.getStatus()==ITestResult.FAILURE) {
+		test.log(LogStatus.FAIL, "Testcase failed");
+	}
+	else {
+		test.log(LogStatus.PASS, "Testcase passed");
+	}
+	extent.endTest(test);
+	test = null;
 	}
 	
 	
@@ -52,8 +63,7 @@ public class Scenarios extends BaseClass {
 		Assert.assertTrue((webDriverOperations.verifyElementTextIsMatching(pp.swag_Labs_Logo(), testData.home_logoText)), "Swag Labs text is not matching");
 		Log.info("<---------> Testcase - LoginFlow <---------> ");
 
-		extent.endTest(test);
-		extent.flush();
+
 	}
 	
 	
@@ -63,13 +73,12 @@ public class Scenarios extends BaseClass {
 		Log.info("<---------> Testcase - productListingVerification <---------> ");
 		test = extent.startTest("productListingVerification");
 		ArrayList<ProductPojo> productsActual = webDriverOperations.returnAllListedProducts();
-		Boolean productsMatching = fileOperations.verifyProductListsAreMatching(productsActual, productsExpected);		
+		Boolean productsMatching = productUtilities.verifyProductListsAreMatching(productsActual, productsExpected);		
 		Assert.assertTrue(productsMatching, "Products are not matching with expected list");
 		Log.info("Products are displayed correctly");
 		Log.info("<---------> Testcase - productListingVerification <---------> ");
 		test.log(LogStatus.PASS, "productListingVerification testcase is passed");
-		extent.endTest(test);
-		extent.flush();
+
 	}
 	
 	@Test (priority = 2, enabled = true, dependsOnMethods = "LoginFlow", description = "Checks if products are sorted correctly on different options of product and price", groups = {"sanity, regression"})
@@ -78,49 +87,46 @@ public class Scenarios extends BaseClass {
 		Log.info("<---------> Testcase - sortingCheck <---------> ");
 		test = extent.startTest("sortingCheck");
 		ArrayList<ProductPojo> productsExpectedsorted = productsExpected;
-		fileOperations.sortByProductName(productsExpectedsorted);
+		productUtilities.sortByProductName(productsExpectedsorted);
 		Log.info("Arraylist is sorted by ascending order of Product Name");
-		fileOperations.displayListItems(productsExpectedsorted);
+		productUtilities.displayListItems(productsExpectedsorted);
 		webDriverOperations.selectDropDownItem(pp.sortingList(), testData.product_sort_name_aToz);
 		ArrayList<ProductPojo> productsActual = webDriverOperations.returnAllListedProducts();
-		Boolean productsMatching = fileOperations.verifyProductListsAreMatching(productsActual, productsExpectedsorted);		
+		Boolean productsMatching = productUtilities.verifyProductListsAreMatching(productsActual, productsExpectedsorted);		
 		Assert.assertEquals(productsMatching, true);
 		Log.info("Products are sorted correctly");
 		
-		fileOperations.reverseSortByProductName(productsExpectedsorted);
+		productUtilities.reverseSortByProductName(productsExpectedsorted);
 		Log.info("Arraylist is sorted by descending order of Product Name");		
-		fileOperations.displayListItems(productsExpectedsorted);
+		productUtilities.displayListItems(productsExpectedsorted);
 		
 		webDriverOperations.selectDropDownItem(pp.sortingList(), testData.product_sort_name_zToa);		
 		productsActual = webDriverOperations.returnAllListedProducts();
-		productsMatching = fileOperations.verifyProductListsAreMatching(productsActual, productsExpectedsorted);		
+		productsMatching = productUtilities.verifyProductListsAreMatching(productsActual, productsExpectedsorted);		
 		Assert.assertEquals(productsMatching, true);
 		Log.info("Products are sorted correctly");		
 		
-		fileOperations.sortByPrice(productsExpectedsorted);
+		productUtilities.sortByPrice(productsExpectedsorted);
 		Log.info("Arraylist is sorted by ascending order of Price");
-		fileOperations.displayListItems(productsExpectedsorted);
+		productUtilities.displayListItems(productsExpectedsorted);
 		
 		webDriverOperations.selectDropDownItem(pp.sortingList(), testData.product_sort_price_lowToHigh);		
 		productsActual = webDriverOperations.returnAllListedProducts();
-		productsMatching = fileOperations.verifyProductPricesAreMatching(productsActual, productsExpectedsorted);		
+		productsMatching = productUtilities.verifyProductPricesAreMatching(productsActual, productsExpectedsorted);		
 		Assert.assertEquals(productsMatching, true);
 		Log.info("Products are sorted correctly");	
 		
 		
-		fileOperations.reversesortByPrice(productsExpectedsorted);
+		productUtilities.reversesortByPrice(productsExpectedsorted);
 		Log.info("Arraylist is sorted by descending order of Price");
-		fileOperations.displayListItems(productsExpectedsorted);
+		productUtilities.displayListItems(productsExpectedsorted);
 		
 		webDriverOperations.selectDropDownItem(pp.sortingList(), testData.product_sort_price_highToLow);		
 		productsActual = webDriverOperations.returnAllListedProducts();
-		productsMatching = fileOperations.verifyProductPricesAreMatching(productsActual, productsExpectedsorted);		
+		productsMatching = productUtilities.verifyProductPricesAreMatching(productsActual, productsExpectedsorted);		
 		Assert.assertEquals(productsMatching, true);
 		Log.info("Products are sorted correctly");	
 		webDriverOperations.sleep(5);
-		test.log(LogStatus.PASS, "sortingCheck testcase is passed");
-		extent.endTest(test);
-		extent.flush();
 		Log.info("<---------> Testcase - sortingCheck <---------> ");
 	}
 	
@@ -182,9 +188,6 @@ public class Scenarios extends BaseClass {
 		Assert.assertTrue(webDriverOperations.verifyElementIsDisplayed(pp.thankYouForOrderMessage()), "Check out complete message is not dispalyed");
 		Log.info("User is able to checkout 3 products");
 		Log.info("<---------> Testcase - additional_Case <---------> ");	
-		test.log(LogStatus.PASS, "additional_Case testcase is passed");
-		extent.endTest(test);
-		extent.flush();
 	}
 	
 }

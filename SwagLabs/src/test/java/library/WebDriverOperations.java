@@ -23,7 +23,10 @@ import com.relevantcodes.extentreports.LogStatus;
 import objects.ProductPojo;
 import testData.TestData;
 import testcases.BaseClass;
-
+/**
+ * Web related activities like instantiating browser, all web element operations are placed here
+ * 
+ */
 public class WebDriverOperations extends BaseClass {
 
 	FileOperations fo = new FileOperations();
@@ -89,11 +92,11 @@ public class WebDriverOperations extends BaseClass {
 		
 		if(dispalyed) {
 			Log.info("Element is displayed: Element:"+element);	
-			test.log(LogStatus.PASS, "Element is displayed: Element:"+element);
+			successLog("Element is displayed: Element:"+element);
 		}
 		else {
 			Log.error("Element is not displayed: Element:"+element);	
-			test.log(LogStatus.FAIL, "Element is not displayed Element:"+element);			
+			failureLog("Element is not displayed Element:"+element);			
 		}
 
 		return dispalyed;
@@ -104,12 +107,12 @@ public class WebDriverOperations extends BaseClass {
 		Boolean elementTextIsMatching = actualText.equals(expectedString);
 		if(elementTextIsMatching) {
 			Log.info("Element text is matching:" +expectedString);		
-			test.log(LogStatus.PASS, "Element text is matching:" +expectedString);
+			successLog("Element text is matching:" +expectedString);
 		} else
 		{
 			takeScreenshot();
 			Log.error("Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);	
-			test.log(LogStatus.FAIL, "Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);	
+			failureLog("Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);	
 		}
 	
 		return elementTextIsMatching;
@@ -157,9 +160,9 @@ public class WebDriverOperations extends BaseClass {
 			Select dropDown = new Select(select);
 			dropDown.selectByVisibleText(valueToSelect);
 			Log.info("Selected: "+valueToSelect+" from dropdown");	
-			test.log(LogStatus.PASS, "Selected: "+valueToSelect+" from dropdown");
+			successLog("Selected: "+valueToSelect+" from dropdown");
 		} catch (Exception e) {
-			test.log(LogStatus.FAIL, "Unable to select: "+valueToSelect+" from dropdown");
+			failureLog("Unable to select: "+valueToSelect+" from dropdown");
 		}
 
 	}
@@ -170,10 +173,10 @@ public class WebDriverOperations extends BaseClass {
 			List<WebElement> addToCartButtons = driver.findElements(By.xpath("//button[contains(text(), 'Add to cart')]"));
 			addToCartButtons.get(number).click();
 			Log.info("Added product to the cart");	
-			test.log(LogStatus.PASS, "Added product to the cart");
+			successLog("Added product to the cart");
 		} catch (Exception e) {
 			Log.error("Not able to add product to the cart");	
-			test.log(LogStatus.FAIL, "Not able to add product to the cart");
+			failureLog("Not able to add product to the cart");
 		}
 
 	}

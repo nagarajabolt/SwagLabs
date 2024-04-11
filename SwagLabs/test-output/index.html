@@ -254,16 +254,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'additional_Case')
 data.setCell(0, 2, 'testcases.Scenarios')
-data.setCell(0, 3, 969);
+data.setCell(0, 3, 872);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'LoginFlow')
 data.setCell(1, 2, 'testcases.Scenarios')
-data.setCell(1, 3, 303);
+data.setCell(1, 3, 108);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 980 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -284,13 +284,13 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">testcases.Scenarios</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">checkOut</span>
-                <br/>
-                <span class="ignored-method-name">productListingVerification</span>
-                <br/>
                 <span class="ignored-method-name">sortingCheck</span>
                 <br/>
                 <span class="ignored-method-name">addingToCart</span>
+                <br/>
+                <span class="ignored-method-name">checkOut</span>
+                <br/>
+                <span class="ignored-method-name">productListingVerification</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -309,28 +309,32 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">LoginToApplication</span>
-                <span class="method-start">247 ms</span>
+                <span class="method-start">197 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginFlow</span>
-                <span class="method-start">9556 ms</span>
+                <span class="method-start">10888 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">9877 ms</span>
+                <span class="method-name">cleanUp([TestResult name=LoginFlow status=SUCCESS method=Scenarios.LoginFlow()[pri:0, instance:testcases.Sce...)</span>
+                <span class="method-start">10996 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">LoginToApplication</span>
-                <span class="method-start">10382 ms</span>
+                <span class="method-start">11244 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">additional_Case</span>
-                <span class="method-start">19293 ms</span>
+                <span class="method-start">20760 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">20273 ms</span>
+                <span class="method-name">cleanUp([TestResult name=additional_Case status=SUCCESS method=Scenarios.additional_Case()[pri:5, instance:t...)</span>
+                <span class="method-start">21634 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">cleanUp</span>
+                <span class="method-start">21937 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

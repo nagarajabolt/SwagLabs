@@ -4,7 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import testcases.BaseClass;
-
+/**
+ * This class contains all elements of Products page
+ * 
+ */
 public class ProductsPage extends BaseClass {
 	
 

@@ -4,7 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import testcases.BaseClass;
-
+/**
+ * This page contains all elements of Checkout page
+ * 
+ */
 public class CheckoutPage extends BaseClass {
 	public WebElement checkOutButton()
 	{

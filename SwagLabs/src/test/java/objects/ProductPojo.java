@@ -1,5 +1,8 @@
 package objects;
-
+/**
+ * This class is pojo file for Product
+ * 
+ */
 public class ProductPojo {
 	private String productName;
 	private double price;

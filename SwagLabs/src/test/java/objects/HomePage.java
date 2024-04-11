@@ -4,7 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import testcases.BaseClass;
-
+/**
+ * This page contains all elements of Home page
+ * 
+ */
 public class HomePage extends BaseClass {
 
 	public WebElement homePage_username_editBox()

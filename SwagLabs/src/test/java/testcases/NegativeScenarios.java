@@ -8,7 +8,10 @@ import org.testng.annotations.Test;
 import objects.HomePage;
 import testData.DataProviderClass;
 import testData.Messages;
-
+/**
+ * This class contains all negative scenarios
+ * 
+ */
 public class NegativeScenarios extends BaseClass{
 	HomePage hp = new HomePage();
 	Messages mm = new Messages();
