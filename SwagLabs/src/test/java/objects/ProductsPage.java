@@ -77,6 +77,19 @@ public class ProductsPage extends BaseClass {
 		
 	}
 	
-	
-	
+	public WebElement removeButton()
+	{
+		WebElement element = null;
+		try {
+			element = driver.findElement(By.id("remove-sauce-labs-backpack"));
+		}
+		catch(Exception exception) {
+			Log.error(exception.toString());
+		}
+		 
+		return element;		
+		
+		
+	}
+		
 }

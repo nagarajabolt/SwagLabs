@@ -1,9 +1,12 @@
 package testcases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import library.FileOperations;
 import library.WebDriverOperations;
 import objects.ProductPojo;
+import testData.ProductsData;
 import java.util.ArrayList;
 import java.util.Properties;
 import org.apache.log4j.Logger;
@@ -22,6 +25,7 @@ public class BaseClass {
 	protected String chromeDriverPath = workingDirectory + "\\src\\test\\java\\drivers\\chromedriver.exe";
 
 	FileOperations fileOperations = null;
+
 	public Properties properties = null;
 	WebDriverOperations webDriverOperations = null;
 	ArrayList<ProductPojo> productsExpected = null;
@@ -34,33 +38,19 @@ public class BaseClass {
 		Log.info("Configuration Filename"+configurationFileName);
 
 		fileOperations = new FileOperations();
-		
 		properties = fileOperations.readPropertiesFile(configurationFileName);
-		
 		webDriverOperations = new WebDriverOperations();
-		productsExpected = new ArrayList<ProductPojo>();
-
-
+		ProductsData pd = new ProductsData();
+		productsExpected = pd.initializeProduct();
 		browser = properties.getProperty("Browser");
 		Log.info("Browser name:"+browser);
 		url = properties.getProperty("URL");
-		Log.info("URL:"+url);
-		
-
-		ProductPojo product = new ProductPojo("Sauce Labs Backpack", 29.99);
-		productsExpected.add(product);		
-		product = new ProductPojo("Sauce Labs Bike Light", 9.99);
-		productsExpected.add(product);	
-		product = new ProductPojo("Sauce Labs Bolt T-Shirt", 15.99);
-		productsExpected.add(product);
-		product = new ProductPojo("Sauce Labs Fleece Jacket", 49.99);
-		productsExpected.add(product);		
-		product = new ProductPojo("Sauce Labs Onesie", 7.99);
-		productsExpected.add(product);				
-		product = new ProductPojo("Test.allTheThings() T-Shirt (Red)", 15.99);
-		productsExpected.add(product);
+		Log.info("URL:"+url);		
 	}
 
-	
+	@AfterSuite
+	public void cleanUp() {
+		webDriverOperations.quitBrowser();
+	}	
 
 }

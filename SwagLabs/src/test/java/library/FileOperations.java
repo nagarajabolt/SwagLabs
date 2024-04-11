@@ -154,9 +154,8 @@ public class FileOperations extends BaseClass{
 			String screenshotFileName = "Screenshot" + "_" + "Fail" + "_" + getFormatedDateForScreenshots(new Date())+ ".png";
 			try {
 				String screenshotFilePath = screenShotsFolderName +"\\" +screenshotFileName;
+				Log.info("ScreenshotFilePath:"+screenshotFilePath);
 				destFile = new File(screenshotFilePath);
-//				Log.info("Screenshot path:" + screenshotFilePath);
-//				Files.copyFile(scrFile, destFile);
 			} catch (Exception e) {
 				e.printStackTrace();
 				Log.error(e.toString());

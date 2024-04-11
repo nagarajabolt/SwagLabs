@@ -1,80 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-11T15:44:58 IST" name="Suite" finished-at="2024-04-11T15:45:04 IST" duration-ms="6372">
+  <suite started-at="2024-04-11T19:02:35 IST" name="Suite" finished-at="2024-04-11T19:03:34 IST" duration-ms="59489">
     <groups>
     </groups>
-    <test started-at="2024-04-11T15:44:58 IST" name="Test" finished-at="2024-04-11T15:45:04 IST" duration-ms="6372">
-      <class name="testcases.NegativeScenarios">
-        <test-method is-config="true" signature="initialization()[pri:0, instance:testcases.NegativeScenarios@77f1baf5]" started-at="2024-04-11T15:44:57 IST" name="initialization" finished-at="2024-04-11T15:44:58 IST" duration-ms="107" status="PASS">
+    <test started-at="2024-04-11T19:02:35 IST" name="Test" finished-at="2024-04-11T19:03:34 IST" duration-ms="59489">
+      <class name="testcases.Scenarios">
+        <test-method is-config="true" signature="initialization()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:35 IST" name="initialization" finished-at="2024-04-11T19:02:35 IST" duration-ms="74" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method is-config="true" signature="navigateToUrl()[pri:0, instance:testcases.NegativeScenarios@77f1baf5]" started-at="2024-04-11T15:44:58 IST" name="navigateToUrl" finished-at="2024-04-11T15:45:03 IST" duration-ms="5198" status="PASS">
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:35 IST" name="loginToApplication" finished-at="2024-04-11T19:02:42 IST" duration-ms="7766" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToUrl -->
-        <test-method signature="myTest(java.lang.String,java.lang.String)[pri:0, instance:testcases.NegativeScenarios@77f1baf5]" started-at="2024-04-11T15:45:03 IST" name="myTest" data-provider="invalidLoginOptions" finished-at="2024-04-11T15:45:04 IST" duration-ms="939" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[locked_out_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Error message for trying to login with Locked out user is not matching expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Error message for trying to login with Locked out user is not matching expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at testcases.NegativeScenarios.myTest(NegativeScenarios.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="LoginFlow()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:42 IST" name="LoginFlow" finished-at="2024-04-11T19:02:43 IST" duration-ms="102" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- myTest -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.NegativeScenarios@77f1baf5]" started-at="2024-04-11T15:45:04 IST" name="cleanUp" finished-at="2024-04-11T15:45:04 IST" duration-ms="184" status="PASS">
+        </test-method> <!-- LoginFlow -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:43 IST" name="cleanUp" finished-at="2024-04-11T19:02:43 IST" duration-ms="243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-      </class> <!-- testcases.NegativeScenarios -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:43 IST" name="loginToApplication" finished-at="2024-04-11T19:02:51 IST" duration-ms="8243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="productListingVerification()[pri:1, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:51 IST" name="productListingVerification" finished-at="2024-04-11T19:02:51 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productListingVerification -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:51 IST" name="cleanUp" finished-at="2024-04-11T19:02:51 IST" duration-ms="318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:02:51 IST" name="loginToApplication" finished-at="2024-04-11T19:03:00 IST" duration-ms="8309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="sortingCheck()[pri:2, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:00 IST" name="sortingCheck" finished-at="2024-04-11T19:03:06 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="5735" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sortingCheck -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:06 IST" name="cleanUp" finished-at="2024-04-11T19:03:06 IST" duration-ms="270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:06 IST" name="loginToApplication" finished-at="2024-04-11T19:03:14 IST" duration-ms="8158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="addingToCart()[pri:3, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:14 IST" name="addingToCart" finished-at="2024-04-11T19:03:14 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addingToCart -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:14 IST" name="cleanUp" finished-at="2024-04-11T19:03:14 IST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:14 IST" name="loginToApplication" finished-at="2024-04-11T19:03:23 IST" duration-ms="8220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="checkOut()[pri:4, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:23 IST" name="checkOut" finished-at="2024-04-11T19:03:23 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOut -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:23 IST" name="cleanUp" finished-at="2024-04-11T19:03:23 IST" duration-ms="338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="loginToApplication()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:23 IST" name="loginToApplication" finished-at="2024-04-11T19:03:33 IST" duration-ms="9639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApplication -->
+        <test-method signature="additional_Case()[pri:5, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:33 IST" name="additional_Case" finished-at="2024-04-11T19:03:34 IST" depends-on-methods="testcases.Scenarios.LoginFlow" duration-ms="788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- additional_Case -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:testcases.Scenarios@37ceb1df]" started-at="2024-04-11T19:03:34 IST" name="cleanUp" finished-at="2024-04-11T19:03:34 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- testcases.Scenarios -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

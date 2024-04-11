@@ -143,8 +143,11 @@ public class WebDriverOperations extends BaseClass {
 	public void quitBrowser()
 	{
 		try {
-			driver.quit();
-			Log.info("Driver is quit");
+			if(!(driver==null)) {
+				driver.quit();
+				Log.info("Driver is quit");				
+			}
+
 		} catch (Exception e) {
 			Log.error(e);
 		}
