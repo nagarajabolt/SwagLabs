@@ -5,14 +5,11 @@
     <classes>
       <class name="testcases.Scenarios">
         <methods>
-          <include name="sortingCheck"/>
-          <include name="LoginToApplication"/>
-          <include name="additional_Case"/>
-          <include name="LoginFlow"/>
+          <include name="loginToApplication"/>
           <include name="cleanUp"/>
-          <include name="checkOut"/>
+          <include name="cleanUp"/>
+          <include name="purposelyFailLoginFlow"/>
           <include name="initialization"/>
-          <include name="addingToCart"/>
         </methods>
       </class> <!-- testcases.Scenarios -->
     </classes>

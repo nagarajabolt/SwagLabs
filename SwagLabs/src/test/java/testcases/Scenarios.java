@@ -15,7 +15,7 @@ import objects.ProductPojo;
 import objects.ProductsPage;
 import testData.TestData;
 /**
- * This class contains all positive scenarios like login flow, sorting, adding to cart, checkout
+ * This class contains all positive scenarios (plus 1 deliberate -ve scenario for demo) like login flow, sorting, adding to cart, checkout
  * 
  */
 public class Scenarios extends BaseClass {
@@ -26,7 +26,7 @@ public class Scenarios extends BaseClass {
 
 	
 	@BeforeMethod(description = "Logs into the application", groups = {"sanity", "regression", "positive", "e2e"})
-	public void LoginToApplication()
+	public void loginToApplication()
 	{		
 		Log.info("<---------> Login to the application <---------> ");
 		webDriverOperations.instantiateBrowser(browser, headless);
@@ -55,19 +55,19 @@ public class Scenarios extends BaseClass {
 	
 	
 	@Test (priority = 0, enabled = true, description = "Checks if logo is displayed after login", groups = {"sanity", "regression", "positive", "e2e"})
-	public void LoginFlow()
+	public void loginFlow()
 	{				
-		Log.info("<---------> Testcase - LoginFlow <---------> ");
-		test = extent.startTest("LoginFlow");
+		Log.info("<---------> Testcase - loginFlow <---------> ");
+		test = extent.startTest("loginFlow");
 		Assert.assertTrue(webDriverOperations.verifyElementIsDisplayed(pp.swag_Labs_Logo()), "Swag Labs logo is not displayed");
 		Assert.assertTrue((webDriverOperations.verifyElementTextIsMatching(pp.swag_Labs_Logo(), testData.home_logoText)), "Swag Labs text is not matching");
-		Log.info("<---------> Testcase - LoginFlow <---------> ");
+		Log.info("<---------> Testcase - loginFlow <---------> ");
 
 
 	}
 	
 	
-	@Test (priority = 1, enabled = true, dependsOnMethods = "LoginFlow", description = "Checks if products are listed correctly", groups = {"sanity", "regression", "positive"})
+	@Test (priority = 1, enabled = true, dependsOnMethods = "loginFlow", description = "Checks if products are listed correctly", groups = {"sanity", "regression", "positive"})
 	public void productListingVerification()
 	{
 		Log.info("<---------> Testcase - productListingVerification <---------> ");
@@ -81,7 +81,7 @@ public class Scenarios extends BaseClass {
 
 	}
 	
-	@Test (priority = 2, enabled = true, dependsOnMethods = "LoginFlow", description = "Checks if products are sorted correctly on different options of product and price", groups = {"sanity, regression"})
+	@Test (priority = 2, enabled = true, dependsOnMethods = "loginFlow", description = "Checks if products are sorted correctly on different options of product and price", groups = {"sanity, regression"})
 	public void sortingCheck()
 	{
 		Log.info("<---------> Testcase - sortingCheck <---------> ");
@@ -130,7 +130,7 @@ public class Scenarios extends BaseClass {
 		Log.info("<---------> Testcase - sortingCheck <---------> ");
 	}
 	
-	@Test (priority = 3, enabled = true, dependsOnMethods = "LoginFlow", description = "Checks if products are added to cart", groups = {"sanity", "regression"})
+	@Test (priority = 3, enabled = true, dependsOnMethods = "loginFlow", description = "Checks if products are added to cart", groups = {"sanity", "regression"})
 	public void addingToCart()
 	{
 		Log.info("<---------> Testcase - addingToCart <---------> ");
@@ -143,10 +143,9 @@ public class Scenarios extends BaseClass {
 		Log.info("<---------> Testcase - addingToCart <---------> ");
 		extent.endTest(test);
 		extent.flush();
-//		webDriverOperations.sleep(5);
 	}
 
-	@Test (priority = 4, enabled = true, dependsOnMethods = "LoginFlow", description = "Checks if user is able to checkout products", groups = {"sanity", "regression"})
+	@Test (priority = 4, enabled = true, dependsOnMethods = "loginFlow", description = "Checks if user is able to checkout products", groups = {"sanity", "regression"})
 	public void checkOut()
 	{
 		Log.info("<---------> Testcase - checkOut <---------> ");	
@@ -168,7 +167,7 @@ public class Scenarios extends BaseClass {
 		extent.flush();
 	}	
 	
-	@Test (priority = 5, enabled = true, dependsOnMethods = "LoginFlow", description = "Checks if user is able to checkout first 3 least priced products", groups = {"sanity", "regression", "e2e"})
+	@Test (priority = 5, enabled = true, dependsOnMethods = "loginFlow", description = "Checks if user is able to checkout first 3 least priced products", groups = {"sanity", "regression", "e2e"})
 	public void additional_Case()
 	{
 		Log.info("<---------> Testcase - additional_Case <---------> ");	
@@ -188,6 +187,18 @@ public class Scenarios extends BaseClass {
 		Assert.assertTrue(webDriverOperations.verifyElementIsDisplayed(pp.thankYouForOrderMessage()), "Check out complete message is not dispalyed");
 		Log.info("User is able to checkout 3 products");
 		Log.info("<---------> Testcase - additional_Case <---------> ");	
+	}
+	
+	@Test (priority = 6, enabled = true, description = "Purposely fails login flow for demo", groups = {"sanity", "regression", "positive", "e2e"})
+	public void purposelyFailLoginFlow()
+	{				
+		Log.info("<---------> Testcase - purposelyFailloginFlow <---------> ");
+		test = extent.startTest("loginFlow");
+		Assert.assertTrue(webDriverOperations.verifyElementIsDisplayed(pp.swag_Labs_Logo()), "Swag Labs logo is not displayed");
+		Assert.assertTrue((webDriverOperations.verifyElementTextIsMatching(pp.swag_Labs_Logo(), testData.home_logoText_Fail)), "Swag Labs text is not matching");
+		Log.info("<---------> Testcase - purposelyFailLoginFlow <---------> ");
+
+
 	}
 	
 }

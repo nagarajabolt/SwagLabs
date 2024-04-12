@@ -1,54 +1,76 @@
-2024-04-12 00:23:39,531 INFO  Configuration FilenameC:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\testData\Configuration.properties 
-2024-04-12 00:23:39,626 INFO  Browser name:Chrome 
-2024-04-12 00:23:39,626 INFO  URL:https://www.saucedemo.com/ 
-2024-04-12 00:23:39,626 INFO  Headless:false 
-2024-04-12 00:23:39,656 INFO  <---------> Login to the application <--------->  
-2024-04-12 00:23:39,657 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-12 00:23:39,657 INFO  Chromdriverpath is set 
-2024-04-12 00:23:39,657 INFO  false 
-2024-04-12 00:23:43,355 INFO  Not headless Chromedriver is instantiated 
-2024-04-12 00:23:45,088 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-12 00:23:45,173 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (c137bdf1653943aa9664b36f3b5f4a81)] -> xpath: //input[@placeholder='Username']] 
-2024-04-12 00:23:45,232 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (c137bdf1653943aa9664b36f3b5f4a81)] -> xpath: //input[@placeholder='Password']] 
-2024-04-12 00:23:45,311 INFO  Clicked on element:[[ChromeDriver: chrome on windows (c137bdf1653943aa9664b36f3b5f4a81)] -> id: login-button] 
-2024-04-12 00:23:45,343 INFO  <---------> Login to the application <--------->  
-2024-04-12 00:23:50,345 INFO  Waited for 5 of seconds 
-2024-04-12 00:23:50,366 INFO  <---------> Testcase - LoginFlow <--------->  
-2024-04-12 00:23:50,428 INFO  Element is displayed: Element:[[ChromeDriver: chrome on windows (c137bdf1653943aa9664b36f3b5f4a81)] -> xpath: //div[contains(text(), 'Swag Labs')]] 
-2024-04-12 00:23:50,455 INFO  Element text is matching:Swag Labs 
-2024-04-12 00:23:50,455 INFO  <---------> Testcase - LoginFlow <--------->  
-2024-04-12 00:23:50,702 INFO  Driver is quit 
-2024-04-12 00:23:50,703 INFO  <---------> Login to the application <--------->  
-2024-04-12 00:23:50,703 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
-2024-04-12 00:23:50,703 INFO  Chromdriverpath is set 
-2024-04-12 00:23:50,703 INFO  false 
-2024-04-12 00:23:54,111 INFO  Not headless Chromedriver is instantiated 
-2024-04-12 00:23:54,963 INFO  Navigated to url:https://www.saucedemo.com/ 
-2024-04-12 00:23:55,046 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> xpath: //input[@placeholder='Username']] 
-2024-04-12 00:23:55,101 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> xpath: //input[@placeholder='Password']] 
-2024-04-12 00:23:55,176 INFO  Clicked on element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> id: login-button] 
-2024-04-12 00:23:55,206 INFO  <---------> Login to the application <--------->  
-2024-04-12 00:24:00,218 INFO  Waited for 5 of seconds 
-2024-04-12 00:24:00,225 INFO  <---------> Testcase - additional_Case <--------->  
-2024-04-12 00:24:00,255 INFO  element sortinglist is returned 
-2024-04-12 00:24:00,334 INFO  Selected: Price (low to high) from dropdown 
-2024-04-12 00:24:00,378 INFO  Added product to the cart 
-2024-04-12 00:24:00,419 INFO  Added product to the cart 
-2024-04-12 00:24:00,459 INFO  Added product to the cart 
-2024-04-12 00:24:00,522 INFO  Clicked on element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> xpath: //a[@class = 'shopping_cart_link']] 
-2024-04-12 00:24:00,587 INFO  Clicked on element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> id: checkout] 
-2024-04-12 00:24:00,703 INFO  Entered data:SampleFirstName in element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> id: first-name] 
-2024-04-12 00:24:00,790 INFO  Entered data:SampleLastName in element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> id: last-name] 
-2024-04-12 00:24:00,847 INFO  Entered data:556677 in element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> id: postal-code] 
-2024-04-12 00:24:00,983 INFO  Clicked on element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> id: continue] 
-2024-04-12 00:24:01,065 INFO  Clicked on element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> id: finish] 
-2024-04-12 00:24:01,091 INFO  Element is displayed: Element:[[ChromeDriver: chrome on windows (ae89fee42498e90364cda9b584c15b6d)] -> xpath: //h2[contains(text(),'Thank you for your order!')]] 
-2024-04-12 00:24:01,091 INFO  User is able to checkout 3 products 
-2024-04-12 00:24:01,091 INFO  <---------> Testcase - additional_Case <--------->  
-2024-04-12 00:24:01,354 INFO  Driver is quit 
-2024-04-12 00:24:01,396 INFO  Driver is quit 
-2024-04-12 00:24:01,403 DEBUG Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it. 
-2024-04-12 00:24:01,403 DEBUG TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found 
-2024-04-12 00:24:01,403 DEBUG TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found 
-2024-04-12 00:24:01,403 DEBUG TemplateLoader.findTemplateSource("Extent.ftl"): Found 
-2024-04-12 00:24:01,403 DEBUG Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/91998/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl" 
+2024-04-12 08:04:08,327 INFO  Configuration FilenameC:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\testData\Configuration.properties 
+2024-04-12 08:04:08,434 INFO  Browser name:Chrome 
+2024-04-12 08:04:08,434 INFO  URL:https://www.saucedemo.com/ 
+2024-04-12 08:04:08,434 INFO  Headless:false 
+2024-04-12 08:04:08,465 INFO  <---------> Login to the application <--------->  
+2024-04-12 08:04:08,465 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
+2024-04-12 08:04:08,465 INFO  Chromdriverpath is set 
+2024-04-12 08:04:08,465 INFO  false 
+2024-04-12 08:04:25,936 INFO  Not headless Chromedriver is instantiated 
+2024-04-12 08:04:29,996 INFO  Navigated to url:https://www.saucedemo.com/ 
+2024-04-12 08:04:30,335 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (a56d2a81a99f2d7bc0b404a66cc3412b)] -> xpath: //input[@placeholder='Username']] 
+2024-04-12 08:04:30,396 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (a56d2a81a99f2d7bc0b404a66cc3412b)] -> xpath: //input[@placeholder='Password']] 
+2024-04-12 08:04:30,867 INFO  Clicked on element:[[ChromeDriver: chrome on windows (a56d2a81a99f2d7bc0b404a66cc3412b)] -> id: login-button] 
+2024-04-12 08:04:30,936 INFO  <---------> Login to the application <--------->  
+2024-04-12 08:04:35,947 INFO  Waited for 5 of seconds 
+2024-04-12 08:04:36,088 INFO  <---------> Testcase - loginFlow <--------->  
+2024-04-12 08:04:36,170 INFO  Element is displayed: Element:[[ChromeDriver: chrome on windows (a56d2a81a99f2d7bc0b404a66cc3412b)] -> xpath: //div[contains(text(), 'Swag Labs')]] 
+2024-04-12 08:04:36,211 INFO  Element text is matching:Swag Labs 
+2024-04-12 08:04:36,211 INFO  <---------> Testcase - loginFlow <--------->  
+2024-04-12 08:04:37,539 INFO  Driver is quit 
+2024-04-12 08:04:37,549 INFO  <---------> Login to the application <--------->  
+2024-04-12 08:04:37,549 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
+2024-04-12 08:04:37,549 INFO  Chromdriverpath is set 
+2024-04-12 08:04:37,549 INFO  false 
+2024-04-12 08:04:42,525 INFO  Not headless Chromedriver is instantiated 
+2024-04-12 08:04:43,498 INFO  Navigated to url:https://www.saucedemo.com/ 
+2024-04-12 08:04:43,690 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (e76e3f95cbe7545ff807214c53c7cccd)] -> xpath: //input[@placeholder='Username']] 
+2024-04-12 08:04:43,782 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (e76e3f95cbe7545ff807214c53c7cccd)] -> xpath: //input[@placeholder='Password']] 
+2024-04-12 08:04:43,898 INFO  Clicked on element:[[ChromeDriver: chrome on windows (e76e3f95cbe7545ff807214c53c7cccd)] -> id: login-button] 
+2024-04-12 08:04:43,938 INFO  <---------> Login to the application <--------->  
+2024-04-12 08:04:48,957 INFO  Waited for 5 of seconds 
+2024-04-12 08:04:48,959 INFO  <---------> Testcase - productListingVerification <--------->  
+2024-04-12 08:04:49,079 INFO  Itemname:Sauce Labs Backpack price:29.99 
+2024-04-12 08:04:49,095 INFO  Itemname:Sauce Labs Bike Light price:9.99 
+2024-04-12 08:04:49,113 INFO  Itemname:Sauce Labs Bolt T-Shirt price:15.99 
+2024-04-12 08:04:49,127 INFO  Itemname:Sauce Labs Fleece Jacket price:49.99 
+2024-04-12 08:04:49,145 INFO  Itemname:Sauce Labs Onesie price:7.99 
+2024-04-12 08:04:49,158 INFO  Itemname:Test.allTheThings() T-Shirt (Red) price:15.99 
+2024-04-12 08:04:49,158 INFO  Actual  : Sauce Labs Backpack 29.99 
+2024-04-12 08:04:49,158 INFO  Expected: Sauce Labs Backpack 29.99 
+2024-04-12 08:04:49,158 INFO  Actual  : Sauce Labs Bike Light 9.99 
+2024-04-12 08:04:49,158 INFO  Expected: Sauce Labs Bike Light 9.99 
+2024-04-12 08:04:49,158 INFO  Actual  : Sauce Labs Bolt T-Shirt 15.99 
+2024-04-12 08:04:49,158 INFO  Expected: Sauce Labs Bolt T-Shirt 15.99 
+2024-04-12 08:04:49,158 INFO  Actual  : Sauce Labs Fleece Jacket 49.99 
+2024-04-12 08:04:49,158 INFO  Expected: Sauce Labs Fleece Jacket 49.99 
+2024-04-12 08:04:49,158 INFO  Actual  : Sauce Labs Onesie 7.99 
+2024-04-12 08:04:49,158 INFO  Expected: Sauce Labs Onesie 7.99 
+2024-04-12 08:04:49,158 INFO  Actual  : Test.allTheThings() T-Shirt (Red) 15.99 
+2024-04-12 08:04:49,158 INFO  Expected: Test.allTheThings() T-Shirt (Red) 15.99 
+2024-04-12 08:04:49,158 INFO  Products are displayed correctly 
+2024-04-12 08:04:49,158 INFO  <---------> Testcase - productListingVerification <--------->  
+2024-04-12 08:04:49,402 INFO  Driver is quit 
+2024-04-12 08:04:49,405 INFO  <---------> Login to the application <--------->  
+2024-04-12 08:04:49,405 INFO  ChromeDriverPath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\drivers\chromedriver.exe 
+2024-04-12 08:04:49,405 INFO  Chromdriverpath is set 
+2024-04-12 08:04:49,405 INFO  false 
+2024-04-12 08:04:52,458 INFO  Not headless Chromedriver is instantiated 
+2024-04-12 08:04:53,090 INFO  Navigated to url:https://www.saucedemo.com/ 
+2024-04-12 08:04:53,170 INFO  Entered data:standard_user in element:[[ChromeDriver: chrome on windows (e63ecbdb54d3675ea98f94507646477d)] -> xpath: //input[@placeholder='Username']] 
+2024-04-12 08:04:53,237 INFO  Entered data:secret_sauce in element:[[ChromeDriver: chrome on windows (e63ecbdb54d3675ea98f94507646477d)] -> xpath: //input[@placeholder='Password']] 
+2024-04-12 08:04:53,307 INFO  Clicked on element:[[ChromeDriver: chrome on windows (e63ecbdb54d3675ea98f94507646477d)] -> id: login-button] 
+2024-04-12 08:04:53,330 INFO  <---------> Login to the application <--------->  
+2024-04-12 08:04:58,341 INFO  Waited for 5 of seconds 
+2024-04-12 08:04:58,343 INFO  <---------> Testcase - purposelyFailloginFlow <--------->  
+2024-04-12 08:04:58,413 INFO  Element is displayed: Element:[[ChromeDriver: chrome on windows (e63ecbdb54d3675ea98f94507646477d)] -> xpath: //div[contains(text(), 'Swag Labs')]] 
+2024-04-12 08:04:58,438 ERROR Element text is not matching - Expected:1Swag Labs Actual:Swag Labs 
+2024-04-12 08:04:58,721 INFO  ScreenshotFilePath:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\Screenshots\Screenshot_Fail_12_04_2024_08_04_58.png 
+2024-04-12 08:04:58,721 INFO  Screenshot Location:C:\Users\91998\git\SwagLabs\SwagLabs\src\test\java\Screenshots\Screenshot_Fail_12_04_2024_08_04_58.png 
+2024-04-12 08:04:59,151 INFO  Driver is quit 
+2024-04-12 08:04:59,275 INFO  Driver is quit 
+2024-04-12 08:04:59,361 DEBUG Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it. 
+2024-04-12 08:04:59,369 DEBUG TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found 
+2024-04-12 08:04:59,373 DEBUG TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found 
+2024-04-12 08:04:59,392 DEBUG TemplateLoader.findTemplateSource("Extent.ftl"): Found 
+2024-04-12 08:04:59,392 DEBUG Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/91998/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl" 

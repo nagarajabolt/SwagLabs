@@ -14,6 +14,7 @@ public class TestData {
 
 	//module name - Home screen
 	public final String home_logoText = "Swag Labs";
+	public final String home_logoText_Fail = "1Swag Labs";
 	
 	//module name - Products screen
 	public final String product_sort_name_aToz = "Name (A to Z)";

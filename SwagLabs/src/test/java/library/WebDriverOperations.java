@@ -110,9 +110,9 @@ public class WebDriverOperations extends BaseClass {
 			successLog("Element text is matching:" +expectedString);
 		} else
 		{
-			takeScreenshot();
 			Log.error("Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);	
-			failureLog("Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);	
+			failureLog("Element text is not matching - Expected:"+expectedString+" Actual:"+actualText);
+
 		}
 	
 		return elementTextIsMatching;
@@ -210,31 +210,33 @@ public class WebDriverOperations extends BaseClass {
 	}
 	
 	
-	public void takeScreenshot() {
+	public String takeScreenshot() {
+		String screenShotFilePath = "";
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File dest = fo.createSceenshotFile();
-
+		screenShotFilePath = dest.getAbsolutePath();
+		Log.info("Screenshot Location:"+screenShotFilePath);
 		try {
 			Files.copy(src, dest);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		return screenShotFilePath;
 	}
 	
 	public void successLog(String message) {
 		try {
 			test.log(LogStatus.PASS, message);					
 		} catch (Exception e) {
-			// TODO: handle exception
 		}
 	}
 	
 	public void failureLog(String message) {
 		try {
-			test.log(LogStatus.FAIL, message);				
+			test.log(LogStatus.FAIL, message);		
+			String screenshotFilePath = takeScreenshot();
+			test.log(LogStatus.FAIL,test.addScreenCapture(screenshotFilePath));
 		} catch (Exception e2) {
-			// TODO: handle exception
 		}
 	}
 }

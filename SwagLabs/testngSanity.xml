@@ -5,8 +5,9 @@
 	<classes>
  		<class name="testcases.Scenarios"> 
  		<methods>
-			<include name="LoginFlow"/>
+			<include name="loginFlow"/>
 			<include name= "productListingVerification"/>
+			<include name= "purposelyFailLoginFlow"/>			
 		</methods>  
  		</class>
     </classes>
